@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    
+    <!-- Text/Glow Gradients -->
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" /> <!-- Indigo -->
+      <stop offset="50%" stop-color="#a855f7" /> <!-- Purple -->
+      <stop offset="100%" stop-color="#ec4899" /> <!-- Pink -->
+    </linearGradient>
+
+    <linearGradient id="cyan-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Drop Shadows / Glows -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" rx="15" fill="url(#bg-gradient)" />
+  
+  <!-- Cyberpunk grid or decorative lines -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="100" y1="0" x2="100" y2="300" />
+    <line x1="200" y1="0" x2="200" y2="300" />
+    <line x1="300" y1="0" x2="300" y2="300" />
+    <line x1="400" y1="0" x2="400" y2="300" />
+    <line x1="500" y1="0" x2="500" y2="300" />
+    <line x1="600" y1="0" x2="600" y2="300" />
+    <line x1="700" y1="0" x2="700" y2="300" />
+  </g>
+
+  <!-- Geometric Abstract Shapes (Glowing) -->
+  <circle cx="700" cy="80" r="40" fill="none" stroke="url(#cyan-gradient)" stroke-width="4" stroke-opacity="0.6" filter="url(#glow)" />
+  <rect x="680" y="180" width="50" height="50" rx="8" fill="none" stroke="url(#primary-gradient)" stroke-width="3" stroke-opacity="0.5" transform="rotate(45 705 205)" filter="url(#glow)" />
+  
+  <path d="M 50,50 L 80,80 L 50,110" fill="none" stroke="url(#primary-gradient)" stroke-width="5" stroke-linecap="round" filter="url(#glow)" />
+
+  <!-- Code elements on the background -->
+  <text x="60" y="240" font-family="monospace" font-size="14" fill="#a78bfa" opacity="0.3">const dev = new Developer({ name: &#x27;Shoyeb&#x27; });</text>
+  <text x="60" y="260" font-family="monospace" font-size="14" fill="#60a5fa" opacity="0.3">dev.code(); // Eat, sleep, code, repeat</text>
+
+  <!-- Main Heading / Title -->
+  <text x="120" y="140" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="48" fill="url(#primary-gradient)" filter="url(#glow)">SHOYEB&#x27;S LAB</text>
+  
+  <!-- Subheading / Tagline -->
+  <text x="122" y="185" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="20" fill="#e2e8f0" opacity="0.9">Crafting code &amp; experimenting with digital solutions</text>
+
+  <!-- Badges inside SVG -->
+  <g transform="translate(122, 210)">
+    <!-- Badge 1: Developer -->
+    <rect width="90" height="24" rx="12" fill="#312e81" stroke="#4338ca" stroke-width="1" />
+    <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#c7d2fe" text-anchor="middle">DEVELOPER</text>
+    
+    <!-- Badge 2: Creator -->
+    <g transform="translate(100, 0)">
+      <rect width="80" height="24" rx="12" fill="#581c87" stroke="#6b21a8" stroke-width="1" />
+      <text x="40" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#f3e8ff" text-anchor="middle">CREATOR</text>
+    </g>
+
+    <!-- Badge 3: Innovator -->
+    <g transform="translate(190, 0)">
+      <rect width="90" height="24" rx="12" fill="#065f46" stroke="#047857" stroke-width="1" />
+      <text x="45" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#d1fae5" text-anchor="middle">INNOVATOR</text>
+    </g>
+  </g>
+</svg>
